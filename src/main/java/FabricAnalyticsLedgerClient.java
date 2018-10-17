@@ -5,7 +5,7 @@ import model.EdgeGateways;
 
 import java.util.Collection;
 
-public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient {
+public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient  {
 
 
     @Override
@@ -14,7 +14,12 @@ public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient {
     }
 
     @Override
-    public void updateAnalyticsInstances(String id, String egid) throws JLedgerClientException {
+    public String createAnalyticsInstances(String id, String payload, String egid) throws JLedgerClientException {
+        return null;
+    }
+
+    @Override
+    public void updateAnalyticsInstances(String id, String payload, String egid) throws JLedgerClientException {
 
     }
 
@@ -44,6 +49,11 @@ public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient {
     }
 
     @Override
+    public String createDataSources(String id, String payload, String egid) throws JLedgerClientException {
+        return null;
+    }
+
+    @Override
     public void deleteDataSources(String id, String egid) throws JLedgerClientException {
 
     }
@@ -64,7 +74,12 @@ public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient {
     }
 
     @Override
-    public void updateEdgeGateways(String egid) throws JLedgerClientException {
+    public String createEdgeGateways(String id, String payload, String egid) throws JLedgerClientException {
+        return null;
+    }
+
+    @Override
+    public void updateEdgeGateways(String egid, String payload) throws JLedgerClientException {
 
     }
 
@@ -76,5 +91,10 @@ public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient {
     @Override
     public EdgeGateways getEdgeGatewaysByEgid(String egid) throws JLedgerClientException {
         return null;
+    }
+
+    @Override
+    public void deleteEdgeGateways(String id) throws JLedgerClientException {
+
     }
 }
