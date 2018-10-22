@@ -54,6 +54,11 @@ public class FabricAnalyticsLedgerClient implements AnalyticsLedgerClient  {
     }
 
     @Override
+    public void updateDataSources(String id, String payload, String egid) throws JLedgerClientException {
+        
+    }
+
+    @Override
     public void deleteDataSources(String id, String egid) throws JLedgerClientException {
 
     }

@@ -23,6 +23,7 @@ interface AnalyticsLedgerClient {
     String createDataSources(DataSources dataSources) throws JLedgerClientException;
     String createDataSources(String id, String payload, String egid) throws JLedgerClientException;
 
+    void updateDataSources(String id, String payload, String egid) throws JLedgerClientException;
     void deleteDataSources(String id, String egid) throws JLedgerClientException;
     Collection<DataSources> getDataSources() throws JLedgerClientException;
     DataSources getDataSourcesbyId( String id) throws JLedgerClientException;

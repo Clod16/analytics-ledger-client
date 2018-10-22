@@ -1,14 +1,25 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class DataSources {
     private String id;
     private String payload;
-    private EdgeGateways edgeGateways;
+    private Collection<EdgeGateways> edgeGatewaysCollection;
 
-    public DataSources(String id, String payload, EdgeGateways edgeGateways) {
+    public DataSources(String id, String payload, Collection<EdgeGateways> edgeGatewaysCollection) {
         this.id = id;
         this.payload = payload;
-        this.edgeGateways = edgeGateways;
+        this.edgeGatewaysCollection = new ArrayList<>();
+    }
+
+    public Collection<EdgeGateways> getEdgeGatewaysCollection() {
+        return edgeGatewaysCollection;
+    }
+
+    public void setEdgeGatewaysCollection(Collection<EdgeGateways> edgeGatewaysCollection) {
+        this.edgeGatewaysCollection = edgeGatewaysCollection;
     }
 
     public String getId() {
@@ -27,11 +38,5 @@ public class DataSources {
         this.payload = payload;
     }
 
-    public EdgeGateways getEdgeGateways() {
-        return edgeGateways;
-    }
 
-    public void setEdgeGateways(EdgeGateways edgeGateways) {
-        this.edgeGateways = edgeGateways;
-    }
 }

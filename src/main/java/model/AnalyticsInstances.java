@@ -1,14 +1,25 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class AnalyticsInstances {
     private String id;
     private String payload;
-    private EdgeGateways edgeGateways;
+    private Collection<EdgeGateways> edgeGatewaysArrayList;
 
-    public AnalyticsInstances(String id, String payload, EdgeGateways edgeGateways) {
+    public AnalyticsInstances(String id, String payload, Collection<EdgeGateways> edgeGatewaysArrayList) {
         this.id = id;
         this.payload = payload;
-        this.edgeGateways = edgeGateways;
+        this.edgeGatewaysArrayList = new ArrayList<>();
+    }
+
+    public Collection<EdgeGateways> getEdgeGatewaysArrayList() {
+        return edgeGatewaysArrayList;
+    }
+
+    public void setEdgeGatewaysArrayList(Collection<EdgeGateways> edgeGatewaysArrayList) {
+        this.edgeGatewaysArrayList = edgeGatewaysArrayList;
     }
 
     public String getId() {
@@ -27,11 +38,4 @@ public class AnalyticsInstances {
         this.payload = payload;
     }
 
-    public EdgeGateways getEdgeGateways() {
-        return edgeGateways;
-    }
-
-    public void setEdgeGateways(EdgeGateways edgeGateways) {
-        this.edgeGateways = edgeGateways;
-    }
 }
