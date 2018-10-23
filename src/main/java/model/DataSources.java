@@ -7,11 +7,13 @@ public class DataSources {
     private String id;
     private String payload;
     private Collection<EdgeGateways> edgeGatewaysCollection;
+    private String egid;
 
-    public DataSources(String id, String payload, Collection<EdgeGateways> edgeGatewaysCollection) {
+    public DataSources(String id, String payload, Collection<EdgeGateways> edgeGatewaysCollection, String egid)  {
         this.id = id;
         this.payload = payload;
         this.edgeGatewaysCollection = new ArrayList<>();
+        this.egid = egid;
     }
 
     public Collection<EdgeGateways> getEdgeGatewaysCollection() {
@@ -20,6 +22,14 @@ public class DataSources {
 
     public void setEdgeGatewaysCollection(Collection<EdgeGateways> edgeGatewaysCollection) {
         this.edgeGatewaysCollection = edgeGatewaysCollection;
+    }
+
+    public String getEgid() {
+        return egid;
+    }
+
+    public void setEgid(String egid) {
+        this.egid = egid;
     }
 
     public String getId() {

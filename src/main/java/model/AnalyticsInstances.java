@@ -7,11 +7,13 @@ public class AnalyticsInstances {
     private String id;
     private String payload;
     private Collection<EdgeGateways> edgeGatewaysArrayList;
+    private String egid;
 
-    public AnalyticsInstances(String id, String payload, Collection<EdgeGateways> edgeGatewaysArrayList) {
+    public AnalyticsInstances(String id, String payload, Collection<EdgeGateways> edgeGatewaysArrayList, String egid) {
         this.id = id;
         this.payload = payload;
         this.edgeGatewaysArrayList = new ArrayList<>();
+        this.egid = egid;
     }
 
     public Collection<EdgeGateways> getEdgeGatewaysArrayList() {
@@ -20,6 +22,14 @@ public class AnalyticsInstances {
 
     public void setEdgeGatewaysArrayList(Collection<EdgeGateways> edgeGatewaysArrayList) {
         this.edgeGatewaysArrayList = edgeGatewaysArrayList;
+    }
+
+    public String getEgid() {
+        return egid;
+    }
+
+    public void setEgid(String egid) {
+        this.egid = egid;
     }
 
     public String getId() {
